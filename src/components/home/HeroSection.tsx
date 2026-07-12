@@ -1,18 +1,83 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useEffect, useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
+
+import {
+  Bed,
+  Bathtub,
+  LocationOn,
+  AutoAwesome,
+  ChevronLeft,
+  ChevronRight
+} from "@mui/icons-material";
+
+import hero1 from '../../images/hero/hero1.jpg';
+import hero2 from '../../images/hero/hero2.jpg';
+import hero3 from '../../images/hero/hero3.jpg';
+import hero4 from '../../images/hero/hero4.jpg';
+
 import happyHomeowner1 from '../../images/Happy Homeowners_1.jpg';
 import happyHomeowner2 from '../../images/Happy Homeowners_2.jpg';
 import happyHomeowner3 from '../../images/Team section.jpg';
-import rightFeatureCard from '../../images/Right side feature card.jpg';
 
 const HeroSection: React.FC = () => {
-  const propertyImages = [
-    happyHomeowner1,
-    happyHomeowner2,
-    happyHomeowner3,
-    rightFeatureCard, 
-  ];
+const propertyImages = [
+  happyHomeowner1,
+  happyHomeowner2,
+  happyHomeowner3,
+];
+
+const slides = [
+  {
+    image: hero1,
+    title: "Premium Residence",
+    location: "Bandra, Mumbai",
+    ai: "99%",
+    beds: 5,
+    baths: 4
+  },
+  {
+    image: hero2,
+    title: "Luxury Apartment",
+    location: "Powai, Mumbai",
+    ai: "97%",
+    beds: 3,
+    baths: 2
+  },
+  {
+    image: hero3,
+    title: "Modern Living",
+    location: "Worli, Mumbai",
+    ai: "98%",
+    beds: 4,
+    baths: 4
+  },
+  {
+    image: hero4,
+    title: "Signature Collection",
+    location: "Goa",
+    ai: "96%",
+    beds: 4,
+    baths: 3
+  },
+];
+
+useEffect(() => {
+  slides.forEach((slide) => {
+    const img = new Image();
+    img.src = slide.image;
+  });
+}, []);
+
+const [current, setCurrent] = useState(0);
+
+useEffect(() => {
+  const timer = setInterval(() => {
+    setCurrent((prev) => (prev + 1) % slides.length);
+  }, 4500);
+
+  return () => clearInterval(timer);
+}, []);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -127,41 +192,139 @@ const HeroSection: React.FC = () => {
 
             {/* Right - Featured Property Card */}
             <div className="relative">
-              <div className="rounded-2xl overflow-hidden shadow-[0px_25px_50px_-12px_#e5e7eb]">
-                <div className="relative h-[625px]">
-                  <img
-                    src={propertyImages[3]}
-                    alt="Villa Serenity"
-                    className="absolute inset-0 w-full h-full object-cover"
-                  />
-                  {/* Property Info Overlay */}
-                  <div className="absolute bottom-6 left-6 right-6 backdrop-blur-md bg-white/90 border border-white/20 rounded-xl p-4 shadow-[0px_10px_15px_-3px_rgba(0,0,0,0.1)]">
-                    <div className="flex justify-between items-start mb-3">
-                      <div>
-                        <h3 className="font-fraunces font-bold text-lg text-[#111827] mb-1">Villa Serenity</h3>
-                        <p className="font-space-mono text-xs text-[#6b7280] uppercase tracking-wide">Beverly Hills, CA</p>
-                      </div>
-                      <div className="bg-[rgba(212,117,91,0.1)] px-2 py-1 rounded">
-                        <span className="font-manrope font-bold text-xs text-[#D4755B]">AI MATCH: 98%</span>
-                      </div>
-                    </div>
-                    <div className="border-t border-[#e5e7eb] pt-3 flex items-center justify-between">
-                      <span className="font-space-mono text-sm text-[#4b5563]">$4,250,000</span>
-                      <div className="flex items-center gap-4 text-[#4b5563]">
-                        <div className="flex items-center gap-1">
-                          <span className="font-material-icons text-xs">bed</span>
-                          <span className="font-manrope text-sm">4</span>
-                        </div>
-                        <div className="flex items-center gap-1">
-                          <span className="font-material-icons text-xs">shower</span>
-                          <span className="font-manrope text-sm">3.5</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+
+<div className="relative overflow-hidden rounded-[34px] shadow-[0_30px_60px_rgba(0,0,0,.18)] h-[625px] border border-white/20">
+
+    <AnimatePresence mode="wait">
+
+      <motion.img
+        key={current}
+        src={slides[current].image}
+        initial={{ opacity: 0, scale: 1.05 }}
+        animate={{ opacity: 1, scale: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 0.8 }}
+        loading="eager"
+        className="absolute inset-0 h-full w-full object-cover"
+      />
+
+    </AnimatePresence>
+
+    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+
+    <motion.div
+      key={slides[current].title}
+      initial={{ y: 40, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: .6 }}
+      className="absolute bottom-7 left-7 right-7 rounded-[28px] backdrop-blur-2xl bg-gradient-to-br from-white/20 to-white/10 border border-white/25 shadow-2xl p-7 text-white"
+    >
+
+      <div className="flex justify-between">
+
+        <div>
+
+          <h2 className="font-fraunces text-3xl">
+            {slides[current].title}
+          </h2>
+
+<div className="flex items-center gap-2 mt-2 text-white/85">
+
+<LocationOn sx={{ fontSize:18 }} />
+
+<span className="text-sm">
+  {slides[current].location}
+</span>
+
+</div>
+
+        </div>
+
+        <div className="flex items-center gap-2 bg-[#D4755B]/90 backdrop-blur-md px-4 py-2 rounded-full shadow-lg">
+
+  <AutoAwesome sx={{ fontSize: 18 }} />
+
+  <span className="text-sm font-semibold">
+    AI Match {slides[current].ai}
+  </span>
+
+</div>
+
+      </div>
+
+      <div className="flex justify-between items-center mt-6">
+
+        {/* <h3 className="text-3xl font-bold">
+          {slides[current].price}
+        </h3> */}
+
+<div className="flex gap-6">
+
+<div className="flex items-center gap-2">
+
+<Bed sx={{ fontSize:20 }} />
+
+<span>{slides[current].beds} Beds</span>
+
+</div>
+
+<div className="flex items-center gap-2">
+
+<Bathtub sx={{ fontSize:20 }} />
+
+<span>{slides[current].baths} Baths</span>
+
+</div>
+
+</div>
+
+      </div>
+
+    </motion.div>
+
+<button
+  onClick={() =>
+    setCurrent((current - 1 + slides.length) % slides.length)
+  }
+  className="absolute left-5 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-white/20 backdrop-blur-lg border border-white/20 flex items-center justify-center hover:bg-white/35 transition-all duration-300"
+>
+  <ChevronLeft />
+</button>
+
+{/* Next Button */}
+<button
+  onClick={() =>
+    setCurrent((current + 1) % slides.length)
+  }
+  className="absolute right-5 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-white/20 backdrop-blur-lg border border-white/20 flex items-center justify-center hover:bg-white/35 transition-all duration-300"
+>
+  <ChevronRight />
+</button>
+
+
+    <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2">
+
+    
+
+      {slides.map((_, i) => (
+
+        <button
+          key={i}
+          onClick={() => setCurrent(i)}
+          className={`h-2.5 rounded-full transition-all duration-300 ${
+            current === i
+? "bg-[#D4755B] w-10"
+: "bg-white/40 w-2.5"
+          }`}
+        />
+
+      ))}
+
+    </div>
+
+  </div>
+
+</div>
           </div>
         </div>
       </section>
