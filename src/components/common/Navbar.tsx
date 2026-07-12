@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useAuth } from '../../contexts/AuthContext';
+import logo from '../../../Assets/Logo_new.png';
 
 const Navbar: React.FC = () => {
   const location = useLocation();
@@ -48,7 +49,7 @@ const Navbar: React.FC = () => {
       <div className="max-w-[1280px] mx-auto px-8 flex items-center justify-between h-20">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-3" onClick={closeMobileMenu}>
-          <img src="/src/components/common/Logo_new.png" alt="BuildEstate" className="h-9 w-auto" />
+          <img src={logo} alt="BuildEstate" className="h-9 w-auto" />
           <span className="font-fraunces text-2xl font-bold text-[#111827]">BuildEstate</span>
         </Link>
 
