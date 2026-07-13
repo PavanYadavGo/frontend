@@ -16,9 +16,9 @@ const ContactInfoCards: React.FC = () => {
               Visit Our Office
             </h3>
             <p className="font-manrope font-extralight text-sm text-[#4B5563] leading-relaxed mb-3">
-              502, Devpath Building,<br />
-              Near Torrent Lab,<br />
-              Ashram Road, Ahmedabad
+              Pinnacle Business Park,<br />
+              We Work,2nd Floor,<br />
+              Andheri, Mumbai, Maharashtra 400093,
             </p>
             <a 
               href="https://maps.google.com" 
@@ -49,7 +49,7 @@ const ContactInfoCards: React.FC = () => {
             </h3>
             <div className="space-y-2">
               <a 
-                href="tel:+919876543210" 
+                href="tel:+918879240162" 
                 className="flex items-center gap-2 font-manrope font-extralight text-sm text-[#4B5563] hover:text-[#D4755B] transition-colors"
               >
                 <span className="material-icons text-base">
@@ -58,7 +58,7 @@ const ContactInfoCards: React.FC = () => {
                 <span>+91 8879240162</span>
               </a>
               <a 
-                href="tel:+919876543210" 
+                href="tel:+919920429137" 
                 className="flex items-center gap-2 font-manrope font-extralight text-sm text-[#4B5563] hover:text-[#D4755B] transition-colors"
               >
                 <span className="material-icons text-base">
@@ -67,7 +67,7 @@ const ContactInfoCards: React.FC = () => {
                 <span>+91 9920429137</span>
               </a>
               <a 
-                href="tel:+919876543210" 
+                href="tel:+919867779877" 
                 className="flex items-center gap-2 font-manrope font-extralight text-sm text-[#4B5563] hover:text-[#D4755B] transition-colors"
               >
                 <span className="material-icons text-base">
@@ -76,13 +76,13 @@ const ContactInfoCards: React.FC = () => {
                 <span>+91 9867779877</span>
               </a>
               <a 
-                href="mailto:hello@buildestate.com" 
+                href="mailto:foundationx.abr@gmail.com" 
                 className="flex items-center gap-2 font-manrope font-extralight text-sm text-[#4B5563] hover:text-[#D4755B] transition-colors"
               >
                 <span className="material-icons text-base">
                   email
                 </span>
-                <span>hello@buildestate.com</span>
+                <span>foundationx.abr@gmail.com</span>
               </a>
             </div>
           </div>
