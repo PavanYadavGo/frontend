@@ -55,7 +55,25 @@ const ContactInfoCards: React.FC = () => {
                 <span className="material-icons text-base">
                   call
                 </span>
-                <span>+91 98765 43210</span>
+                <span>+91 8879240162</span>
+              </a>
+              <a 
+                href="tel:+919876543210" 
+                className="flex items-center gap-2 font-manrope font-extralight text-sm text-[#4B5563] hover:text-[#D4755B] transition-colors"
+              >
+                <span className="material-icons text-base">
+                  call
+                </span>
+                <span>+91 9920429137</span>
+              </a>
+              <a 
+                href="tel:+919876543210" 
+                className="flex items-center gap-2 font-manrope font-extralight text-sm text-[#4B5563] hover:text-[#D4755B] transition-colors"
+              >
+                <span className="material-icons text-base">
+                  call
+                </span>
+                <span>+91 9867779877</span>
               </a>
               <a 
                 href="mailto:hello@buildestate.com" 

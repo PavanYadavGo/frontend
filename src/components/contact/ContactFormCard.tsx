@@ -13,6 +13,71 @@ const ContactFormCard: React.FC = () => {
   const [loading, setLoading] = useState(false);
   const [status, setStatus] = useState<'idle' | 'success' | 'error'>('idle');
   const [statusMessage, setStatusMessage] = useState('');
+  const [errors, setErrors] = useState({
+  firstName: '',
+  lastName: '',
+  email: '',
+  phoneNumber: '',
+  message: '',
+});
+const validateForm = () => {
+  const newErrors = {
+    firstName: '',
+    lastName: '',
+    email: '',
+    phoneNumber: '',
+    message: '',
+  };
+
+  let valid = true;
+
+  // First Name
+  if (!formData.firstName.trim()) {
+    newErrors.firstName = 'First name is required';
+    valid = false;
+  } else if (!/^[A-Za-z ]+$/.test(formData.firstName)) {
+    newErrors.firstName = 'Only letters allowed';
+    valid = false;
+  }
+
+  // Last Name
+  if (!formData.lastName.trim()) {
+    newErrors.lastName = 'Last name is required';
+    valid = false;
+  } else if (!/^[A-Za-z ]+$/.test(formData.lastName)) {
+    newErrors.lastName = 'Only letters allowed';
+    valid = false;
+  }
+
+  // Email
+  if (
+    !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)
+  ) {
+    newErrors.email = 'Enter a valid email';
+    valid = false;
+  }
+
+  // Phone
+  if (
+    !/^(\+91)?[6-9]\d{9}$/.test(
+      formData.phoneNumber.replace(/\s+/g, '')
+    )
+  ) {
+    newErrors.phoneNumber = 'Enter a valid phone number';
+    valid = false;
+  }
+
+  // Message
+  if (formData.message.trim().length < 20) {
+    newErrors.message =
+      'Message should be at least 20 characters';
+    valid = false;
+  }
+
+  setErrors(newErrors);
+
+  return valid;
+};
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
@@ -24,6 +89,7 @@ const ContactFormCard: React.FC = () => {
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
+    if (!validateForm()) return;
     e.preventDefault();
     setLoading(true);
     setStatus('idle');
@@ -71,14 +137,26 @@ const ContactFormCard: React.FC = () => {
               First Name
             </label>
             <input
-              type="text"
-              name="firstName"
-              value={formData.firstName}
-              onChange={handleInputChange}
-              placeholder="John"
-              className="w-full bg-[#F5F1E8] border border-[#E6E0DA] rounded-lg px-4 py-3 font-manrope font-extralight text-sm text-[#0F172A] placeholder:text-[#94A3B8] focus:outline-none focus:border-[#D4755B] transition-colors"
-              required
-            />
+  type="text"
+  name="firstName"
+  value={formData.firstName}
+  onChange={handleInputChange}
+  placeholder="John"
+  className={`w-full bg-[#F5F1E8] rounded-xl px-4 py-3.5 text-sm text-[#0F172A] placeholder:text-[#94A3B8]
+  border transition-all duration-300 focus:outline-none focus:ring-4
+  ${
+    errors.firstName
+      ? "border-red-400 focus:ring-red-100"
+      : "border-[#E6E0DA] focus:border-[#D4755B] focus:ring-[#D4755B]/20"
+  }`}
+/>
+
+{errors.firstName && (
+  <p className="mt-2 flex items-center gap-1 text-sm text-red-500">
+    <AlertCircle className="w-4 h-4" />
+    {errors.firstName}
+  </p>
+)}
           </div>
 
           <div>
@@ -91,9 +169,22 @@ const ContactFormCard: React.FC = () => {
               value={formData.lastName}
               onChange={handleInputChange}
               placeholder="Doe"
-              className="w-full bg-[#F5F1E8] border border-[#E6E0DA] rounded-lg px-4 py-3 font-manrope font-extralight text-sm text-[#0F172A] placeholder:text-[#94A3B8] focus:outline-none focus:border-[#D4755B] transition-colors"
               required
-            />
+              className={`w-full bg-[#F5F1E8] rounded-xl px-4 py-3.5 text-sm
+border transition-all duration-300 focus:outline-none focus:ring-4
+${
+errors.lastName
+? "border-red-400 focus:ring-red-100"
+: "border-[#E6E0DA] focus:border-[#D4755B] focus:ring-[#D4755B]/20"
+}`}
+/>
+
+{errors.lastName && (
+<p className="mt-2 flex items-center gap-1 text-sm text-red-500">
+<AlertCircle className="w-4 h-4"/>
+{errors.lastName}
+</p>
+)}
           </div>
         </div>
 
@@ -108,9 +199,22 @@ const ContactFormCard: React.FC = () => {
             value={formData.email}
             onChange={handleInputChange}
             placeholder="john.doe@example.com"
-            className="w-full bg-[#F5F1E8] border border-[#E6E0DA] rounded-lg px-4 py-3 font-manrope font-extralight text-sm text-[#0F172A] placeholder:text-[#94A3B8] focus:outline-none focus:border-[#D4755B] transition-colors"
             required
-          />
+            className={`w-full bg-[#F5F1E8] rounded-xl px-4 py-3.5 text-sm
+border transition-all duration-300 focus:outline-none focus:ring-4
+${
+errors.email
+? "border-red-400 focus:ring-red-100"
+: "border-[#E6E0DA] focus:border-[#D4755B] focus:ring-[#D4755B]/20"
+}`}
+/>
+
+{errors.email && (
+<p className="mt-2 flex items-center gap-1 text-sm text-red-500">
+<AlertCircle className="w-4 h-4"/>
+{errors.email}
+</p>
+)}
         </div>
 
         {/* Phone Number */}
@@ -124,9 +228,22 @@ const ContactFormCard: React.FC = () => {
             value={formData.phoneNumber}
             onChange={handleInputChange}
             placeholder="+91 98765 43210"
-            className="w-full bg-[#F5F1E8] border border-[#E6E0DA] rounded-lg px-4 py-3 font-manrope font-extralight text-sm text-[#0F172A] placeholder:text-[#94A3B8] focus:outline-none focus:border-[#D4755B] transition-colors"
             required
-          />
+            className={`w-full bg-[#F5F1E8] rounded-xl px-4 py-3.5 text-sm
+border transition-all duration-300 focus:outline-none focus:ring-4
+${
+errors.phoneNumber
+? "border-red-400 focus:ring-red-100"
+: "border-[#E6E0DA] focus:border-[#D4755B] focus:ring-[#D4755B]/20"
+}`}
+/>
+
+{errors.phoneNumber && (
+<p className="mt-2 flex items-center gap-1 text-sm text-red-500">
+<AlertCircle className="w-4 h-4"/>
+{errors.phoneNumber}
+</p>
+)}
         </div>
 
         {/* Message */}
@@ -135,21 +252,48 @@ const ContactFormCard: React.FC = () => {
             Message
           </label>
           <textarea
-            name="message"
-            value={formData.message}
-            onChange={handleInputChange}
-            placeholder="Tell us about your inquiry..."
-            rows={5}
-            className="w-full bg-[#F5F1E8] border border-[#E6E0DA] rounded-lg px-4 py-3 font-manrope font-extralight text-sm text-[#0F172A] placeholder:text-[#94A3B8] focus:outline-none focus:border-[#D4755B] transition-colors resize-none"
-            required
-          />
+name="message"
+value={formData.message}
+onChange={handleInputChange}
+rows={5}
+maxLength={500}
+placeholder="Tell us about your inquiry..."
+className={`w-full bg-[#F5F1E8] rounded-xl px-4 py-3.5 text-sm resize-none
+border transition-all duration-300 focus:outline-none focus:ring-4
+${
+errors.message
+? "border-red-400 focus:ring-red-100"
+: "border-[#E6E0DA] focus:border-[#D4755B] focus:ring-[#D4755B]/20"
+}`}
+/>
+
+<div className="mt-2 flex justify-between">
+
+{errors.message ? (
+
+<p className="flex items-center gap-1 text-sm text-red-500">
+<AlertCircle className="w-4 h-4"/>
+{errors.message}
+</p>
+
+) : (
+
+<div />
+
+)}
+
+<p className="text-xs text-gray-400">
+{formData.message.length}/500
+</p>
+
+</div>
         </div>
 
         {/* Submit Button */}
         <button
           type="submit"
           disabled={loading}
-          className="w-full bg-[#D4755B] hover:bg-[#C05621] disabled:opacity-60 disabled:cursor-not-allowed text-white font-manrope font-bold text-base py-3.5 rounded-xl transition-all shadow-lg hover:shadow-xl flex items-center justify-center gap-2"
+          className="w-full bg-[#D4755B] hover:bg-[#C5674D] text-white rounded-xl py-3.5 font-semibold shadow-lg hover:shadow-2xl hover:-translate-y-0.5 transition-all duration-300 disabled:opacity-60 disabled:cursor-not-allowed flex items-center justify-center gap-2"
         >
           {loading ? (
             <>
