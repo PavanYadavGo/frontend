@@ -115,22 +115,34 @@ const Footer: React.FC = () => {
                 <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" className="flex items-start gap-3 font-manrope font-extralight text-[#9ca3af] text-sm hover:text-white transition-colors group">
                   <MapPin className="w-5 h-5 mt-0.5 flex-shrink-0 text-[#D4755B]" />
                   <span className="leading-relaxed">
-                    502, Devpath Building,<br />
-                    Near Torrent Lab,<br />
-                    Ashram Road, Ahmedabad
+                    Pinnacle Business Park,<br />
+                    We Work,2nd Floor,<br />
+                    Andheri, Mumbai, Maharashtra 400093
                   </span>
                 </a>
               </li>
               <li>
-                <a href="tel:+919876543210" className="flex items-center gap-3 font-manrope font-extralight text-[#9ca3af] text-sm hover:text-white transition-colors">
+                <a href="tel:+918879240162" className="flex items-center gap-3 font-manrope font-extralight text-[#9ca3af] text-sm hover:text-white transition-colors">
                   <Phone className="w-5 h-5 flex-shrink-0 text-[#D4755B]" />
-                  <span>+91 98765 43210</span>
+                  <span>+91 8879240162</span>
                 </a>
               </li>
               <li>
-                <a href="mailto:hello@buildestate.com" className="flex items-center gap-3 font-manrope font-extralight text-[#9ca3af] text-sm hover:text-white transition-colors">
+                <a href="tel:+919920429137" className="flex items-center gap-3 font-manrope font-extralight text-[#9ca3af] text-sm hover:text-white transition-colors">
+                  <Phone className="w-5 h-5 flex-shrink-0 text-[#D4755B]" />
+                  <span>+91 9920429137</span>
+                </a>
+              </li>
+              <li>
+                <a href="tel:+919867779877" className="flex items-center gap-3 font-manrope font-extralight text-[#9ca3af] text-sm hover:text-white transition-colors">
+                  <Phone className="w-5 h-5 flex-shrink-0 text-[#D4755B]" />
+                  <span>+91 9867779877</span>
+                </a>
+              </li>
+              <li>
+                <a href="mailto:foundationx.abr@gmail.com" className="flex items-center gap-3 font-manrope font-extralight text-[#9ca3af] text-sm hover:text-white transition-colors">
                   <Mail className="w-5 h-5 flex-shrink-0 text-[#D4755B]" />
-                  <span>hello@buildestate.com</span>
+                  <span>foundationx.abr@gmail.com</span>
                 </a>
               </li>
             </ul>

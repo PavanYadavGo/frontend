@@ -18,7 +18,7 @@ const ContactInfoCards: React.FC = () => {
             <p className="font-manrope font-extralight text-sm text-[#4B5563] leading-relaxed mb-3">
               Pinnacle Business Park,<br />
               We Work,2nd Floor,<br />
-              Andheri, Mumbai, Maharashtra 400093,
+              Andheri, Mumbai, Maharashtra 400093
             </p>
             <a 
               href="https://maps.google.com" 
