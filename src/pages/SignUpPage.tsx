@@ -8,17 +8,71 @@ const SignUpPage: React.FC = () => {
   const navigate = useNavigate();
   const { register } = useAuth();
   const [error, setError] = useState<string | null>(null);
+  const [showOTPModal, setShowOTPModal] = useState(false);
+const [otp, setOTP] = useState("");
+const [signupData, setSignupData] = useState<any>(null);
 
   const handleSignUp = async (formData: any) => {
     try {
       setError(null);
       const fullName = `${formData.firstName} ${formData.lastName}`.trim();
-      await register(fullName, formData.email, '', formData.password);
-      navigate('/');
+const response = await register(
+  fullName,
+  formData.email,
+  formData.phone,
+  formData.password
+);
+
+setSignupData({
+  name: fullName,
+  email: formData.email,
+  phone: formData.phone,
+  password: formData.password,
+});
+
+setShowOTPModal(true);
+
+// TODO:
+// Open OTP modal OR
+// navigate("/verify-otp", {
+//   state: {
+//     name: fullName,
+//     email: formData.email,
+//     phone: formData.phone,
+//     password: formData.password
+//   }
+// });
     } catch (err: any) {
       setError(err.response?.data?.message || err.message || 'Registration failed. Please try again.');
     }
   };
+  const handleVerifyOTP = async () => {
+  try {
+    setError(null);
+
+    const { data } = await userAPI.verifySignupOTP({
+      ...signupData,
+      otp,
+    });
+
+    if (!data.success) {
+      setError(data.message);
+      return;
+    }
+
+    setShowOTPModal(false);
+
+    alert("Phone verified successfully! Please check your email to verify your account.");
+
+    navigate("/signin");
+  } catch (err: any) {
+    setError(
+      err.response?.data?.message ||
+      err.message ||
+      "OTP verification failed."
+    );
+  }
+};
 
   return (
     <div className="min-h-screen bg-[#FAF8F4] flex items-center justify-center py-12 px-4">
@@ -71,6 +125,35 @@ const SignUpPage: React.FC = () => {
           </Link>
         </div>
       </div>
+      {showOTPModal && (
+  <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
+    <div className="bg-white rounded-xl p-6 w-[400px]">
+      <h2 className="text-2xl font-bold mb-2">
+        Verify Phone
+      </h2>
+
+      <p className="text-gray-600 mb-4">
+        Enter the OTP sent to your mobile number.
+      </p>
+
+      <input
+        type="text"
+        maxLength={6}
+        value={otp}
+        onChange={(e) => setOTP(e.target.value)}
+        placeholder="Enter OTP"
+        className="w-full border rounded-lg p-3 mb-4"
+      />
+
+<button
+  onClick={handleVerifyOTP}
+  className="w-full bg-[#D4755B] text-white rounded-lg py-3"
+>
+  Verify OTP
+</button>
+    </div>
+  </div>
+)}
     </div>
   );
 };

@@ -53,15 +53,12 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
   }, []);
 
   const register = useCallback(async (fullName: string, email: string, phone: string, password: string) => {
-    const { data } = await userAPI.register({ fullName, email, phone, password });
-    if (data.success && data.token) {
-      localStorage.setItem('buildestate_token', data.token);
-      localStorage.setItem('buildestate_user', JSON.stringify(data.user));
-      setToken(data.token);
-      setUser(data.user);
-    } else {
-      throw new Error(data.message || 'Registration failed');
-    }
+    const { data } = await userAPI.sendSignupOTP({name: fullName,email,phone,password});
+    if (!data.success) {
+  throw new Error(data.message);
+}
+
+return data;
   }, []);
 
   const logout = useCallback(() => {

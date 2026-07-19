@@ -51,8 +51,14 @@ export const userAPI = {
     apiClient.post('/users/register', {
       name: data.fullName,
       email: data.email,
+      phone: data.phone,
       password: data.password,
+      verifySignupOTP: (data: any) =>
+  axios.post("/api/otp/signup/verify", data),
     }),
+
+    sendSignupOTP: (data: any) =>
+  axios.post("/api/otp/signup/send", data),
 
   login: (data: { email: string; password: string }) =>
     apiClient.post('/users/login', data),
