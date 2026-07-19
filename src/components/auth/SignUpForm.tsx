@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Eye, EyeOff, Mail, Lock, User } from 'lucide-react';
+import { Eye, EyeOff, Mail, Lock, User, Phone } from 'lucide-react';
 
 interface SignUpFormProps {
   onSubmit: (data: any) => void;
@@ -105,7 +105,7 @@ const SignUpForm: React.FC<SignUpFormProps> = ({ onSubmit }) => {
           Phone Number
         </label>
         <div className="relative">
-          <Mail className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-[#94A3B8]" />
+          <Phone className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-[#94A3B8]" />
           <input
             type="phone"
             name="phone"
