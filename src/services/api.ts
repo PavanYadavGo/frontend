@@ -53,14 +53,13 @@ export const userAPI = {
       email: data.email,
       phone: data.phone,
       password: data.password,
-
     }),
 
-          verifySignupOTP: (data: any) =>
-  axios.post("/api/otp/signup/verify", data),
-          
-    sendSignupOTP: (data: any) =>
-  axios.post("/otp/signup/send", data),
+  sendSignupOTP: (data: any) =>
+    apiClient.post('/otp/signup/send', data),
+
+  verifySignupOTP: (data: any) =>
+    apiClient.post('/otp/signup/verify', data),
 
   login: (data: { email: string; password: string }) =>
     apiClient.post('/users/login', data),
