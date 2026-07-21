@@ -9,12 +9,17 @@ import { auth } from "../firebase";
 let confirmationResult: ConfirmationResult | null = null;
 
 export function setupRecaptcha(containerId: string) {
-  return new RecaptchaVerifier(auth, containerId, {
+  if ((window as any).recaptchaVerifier) {
+    return (window as any).recaptchaVerifier;
+  }
+
+  const verifier = new RecaptchaVerifier(auth, containerId, {
     size: "normal",
-    callback: () => {
-      console.log("reCAPTCHA solved");
-    },
   });
+
+  (window as any).recaptchaVerifier = verifier;
+
+  return verifier;
 }
 
 export async function sendOTP(

@@ -2,6 +2,15 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import AuthHeader from '../components/auth/AuthHeader';
 import SignUpForm from '../components/auth/SignUpForm';
+import {
+  sendOTP,
+  verifyOTP,
+  setupRecaptcha,
+} from "../services/firebasePhone";
+
+import { RecaptchaVerifier } from "firebase/auth";
+import { useEffect, useRef } from "react";
+import { userAPI } from "../services/api";
 import { useAuth } from '../contexts/AuthContext';
 
 const SignUpPage: React.FC = () => {
@@ -11,63 +20,72 @@ const SignUpPage: React.FC = () => {
   const [showOTPModal, setShowOTPModal] = useState(false);
 const [otp, setOTP] = useState("");
 const [signupData, setSignupData] = useState<any>(null);
+const recaptchaRef = useRef<RecaptchaVerifier | null>(null);
 
-  const handleSignUp = async (formData: any) => {
-    try {
-      setError(null);
-      const fullName = `${formData.firstName} ${formData.lastName}`.trim();
-const response = await register(
-  fullName,
-  formData.email,
-  formData.phone,
-  formData.password
-);
+useEffect(() => {
+  if ((window as any).recaptchaVerifier) {
+    recaptchaRef.current = (window as any).recaptchaVerifier;
+    return;
+  }
 
-setSignupData({
-  name: fullName,
-  email: formData.email,
-  phone: formData.phone,
-  password: formData.password,
-});
+  recaptchaRef.current = setupRecaptcha("recaptcha-container");
+}, []);
 
-setShowOTPModal(true);
-
-// TODO:
-// Open OTP modal OR
-// navigate("/verify-otp", {
-//   state: {
-//     name: fullName,
-//     email: formData.email,
-//     phone: formData.phone,
-//     password: formData.password
-//   }
-// });
-    } catch (err: any) {
-      setError(err.response?.data?.message || err.message || 'Registration failed. Please try again.');
-    }
-  };
-  const handleVerifyOTP = async () => {
+const handleSignUp = async (formData: any) => {
   try {
     setError(null);
 
-    const { data } = await userAPI.verifySignupOTP({
-      ...signupData,
-      otp,
+    const fullName =
+      `${formData.firstName} ${formData.lastName}`.trim();
+
+    if (!recaptchaRef.current) {
+      throw new Error("Recaptcha not ready.");
+    }
+
+    await sendOTP(
+      "+91" + formData.phone,
+      recaptchaRef.current
+    );
+
+    setSignupData({
+      name: fullName,
+      email: formData.email,
+      phone: formData.phone,
+      password: formData.password,
     });
 
-    if (!data.success) {
-      setError(data.message);
-      return;
-    }
+    setShowOTPModal(true);
+
+  } catch (err: any) {
+    setError(
+      err.message ||
+      "Failed to send OTP."
+    );
+  }
+};
+const handleVerifyOTP = async () => {
+  try {
+    setError(null);
+
+    await verifyOTP(otp);
+
+    await register(
+      signupData.name,
+      signupData.email,
+      signupData.phone,
+      signupData.password
+    );
 
     setShowOTPModal(false);
 
-    alert("Phone verified successfully! Please check your email to verify your account.");
+    alert(
+      "Phone verified successfully! Please verify your email."
+    );
 
     navigate("/signin");
+
   } catch (err: any) {
     setError(
-      err.response?.data?.message ||
       err.message ||
       "OTP verification failed."
     );
@@ -154,8 +172,11 @@ setShowOTPModal(true);
     </div>
   </div>
 )}
+<div id="recaptcha-container"></div>
     </div>
+    
   );
+  
 };
 
 export default SignUpPage;

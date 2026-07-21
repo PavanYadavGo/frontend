@@ -195,8 +195,6 @@ const SignUpForm: React.FC<SignUpFormProps> = ({ onSubmit }) => {
         </label>
       </div>
 
-      <div id="recaptcha-container"></div>
-
       {/* Submit Button */}
       <button
         type="submit"

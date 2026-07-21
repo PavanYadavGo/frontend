@@ -41,7 +41,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
   }, []);
 
   const login = useCallback(async (email: string, password: string, rememberMe: boolean = false) => {
-    const { data } = await userAPI.login({ email, password, rememberMe });
+    const { data } = await userAPI.login({ email, password });
     if (data.success && data.token) {
       localStorage.setItem('buildestate_token', data.token);
       localStorage.setItem('buildestate_user', JSON.stringify(data.user));
@@ -52,14 +52,28 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     }
   }, []);
 
-  const register = useCallback(async (fullName: string, email: string, phone: string, password: string) => {
-    const { data } = await userAPI.sendSignupOTP({name: fullName,email,phone,password});
-    if (!data.success) {
-  throw new Error(data.message);
-}
+const register = useCallback(
+  async (
+    fullName: string,
+    email: string,
+    phone: string,
+    password: string
+  ) => {
+    const { data } = await userAPI.register({
+      fullName,
+      email,
+      phone,
+      password,
+    });
 
-return data;
-  }, []);
+    if (!data.success) {
+      throw new Error(data.message);
+    }
+
+    return data;
+  },
+  []
+);
 
   const logout = useCallback(() => {
     localStorage.removeItem('buildestate_token');
