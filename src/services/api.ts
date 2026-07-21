@@ -55,12 +55,6 @@ export const userAPI = {
       password: data.password,
     }),
 
-  sendSignupOTP: (data: any) =>
-    apiClient.post('/otp/signup/send', data),
-
-  verifySignupOTP: (data: any) =>
-    apiClient.post('/otp/signup/verify', data),
-
   login: (data: { email: string; password: string }) =>
     apiClient.post('/users/login', data),
 
