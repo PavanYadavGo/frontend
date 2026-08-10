@@ -79,7 +79,7 @@ const handleVerifyOTP = async () => {
     setShowOTPModal(false);
 
     alert(
-      "Phone verified successfully! Please verify your email."
+      "Phone verified successfully! Please verify your email. "
     );
 
     navigate("/signin");
