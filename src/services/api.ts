@@ -3,7 +3,7 @@ import axios from 'axios';
 // API Base URL - uses env variable or falls back to localhost
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL
   ? `${import.meta.env.VITE_API_BASE_URL}/api`
-  : 'https://estate-backend-4ok2.onrender.com/api';
+  : 'https://api.foundationbyxbr.com/api';
   console.log("API_BASE_URL =", API_BASE_URL);
 
 // Create axios instance
