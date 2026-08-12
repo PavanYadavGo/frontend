@@ -43,7 +43,7 @@ const Navbar: React.FC = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      style={{ backgroundColor: `rgba(50, 42, 89, ${bgOpacity.get()})`, backdropFilter: backdropBlur }}
+      style={{ backgroundColor: `rgba(50, 42, 89)`, backdropFilter: backdropBlur }}
       className="sticky top-0 z-50 border-b border-[#E6D5C3]"
     >
       <div className="max-w-[1280px] mx-auto px-8 flex items-center justify-between h-20">
