@@ -27,7 +27,7 @@ export function useSEO({ title, description }: SEOProps) {
 
     // Restore default on unmount
     return () => {
-      document.title = 'BuildEstate - AI-Powered Luxury Real Estate | Find Your Dream Home';
+      document.title = 'Foundation by XBR';
     };
   }, [title, description]);
 }
