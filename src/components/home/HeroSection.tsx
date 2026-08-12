@@ -150,9 +150,9 @@ useEffect(() => {
 
               {/* Heading */}
               <motion.h1 variants={itemVariants} className="font-fraunces text-[56px] lg:text-[70px] leading-[1.1] text-[#111827] mb-8">
-                Discover Your<br />
-                <span className="italic text-[#D4755B]">Dream Home</span> with<br />
-                AI Intelligence
+                Find Your<br />
+                <span className="italic text-[#D4755B]">Perfect Home</span>in<br />
+                the Right Place
               </motion.h1>
 
               {/* Description */}
