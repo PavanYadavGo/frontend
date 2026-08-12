@@ -11,9 +11,9 @@ interface SEOProps {
  */
 export function useSEO({ title, description }: SEOProps) {
   useEffect(() => {
-    if (title) {
-      document.title = `${title} | BuildEstate`;
-    }
+    // if (title) {
+    //   document.title = `${title} | BuildEstate`;
+    // }
 
     if (description) {
       let meta = document.querySelector('meta[name="description"]') as HTMLMetaElement | null;
