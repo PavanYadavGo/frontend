@@ -65,8 +65,8 @@ const Navbar: React.FC = () => {
               to={link.path}
               className={`font-manrope transition-colors ${
                 isActive(link.path)
-                  ? 'text-[##f1c888] font-semibold'
-                  : 'text-[#ffff] hover:text-[##f1c888]'
+                  ? 'text-[#f1c888] font-semibold'
+                  : 'text-[#ffff] hover:text-[#f1c888]'
               }`}
             >
               {link.label}
