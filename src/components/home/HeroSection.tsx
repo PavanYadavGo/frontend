@@ -141,12 +141,12 @@ useEffect(() => {
               animate="visible"
             >
               {/* Badge */}
-              <motion.div variants={itemVariants} className="inline-flex items-center gap-3 bg-[rgba(212,117,91,0.1)] border border-[rgba(212,117,91,0.2)] rounded-full px-4 py-2 mb-10">
+              {/* <motion.div variants={itemVariants} className="inline-flex items-center gap-3 bg-[rgba(212,117,91,0.1)] border border-[rgba(212,117,91,0.2)] rounded-full px-4 py-2 mb-10">
                 <div className="w-2 h-2 bg-[#D4755B] rounded-full" />
                 <span className="font-manrope font-bold text-xs text-[#D4755B] uppercase tracking-wider">
                   AI-Powered Real Estate
                 </span>
-              </motion.div>
+              </motion.div> */}
 
               {/* Heading */}
               <motion.h1 variants={itemVariants} className="font-fraunces text-[56px] lg:text-[70px] leading-[1.1] text-[#111827] mb-8">
@@ -166,10 +166,10 @@ useEffect(() => {
                   Explore Properties
                   <span className="font-material-icons text-sm ml-2">arrow_forward</span>
                 </Link>
-                <Link to="/ai-hub" className="border-2 border-[#d1d5db] text-[#374151] font-manrope font-bold text-lg px-8 py-4 rounded-xl hover:border-[#D4755B] hover:text-[#D4755B] transition-all inline-flex items-center">
+                {/* <Link to="/ai-hub" className="border-2 border-[#d1d5db] text-[#374151] font-manrope font-bold text-lg px-8 py-4 rounded-xl hover:border-[#D4755B] hover:text-[#D4755B] transition-all inline-flex items-center">
                   <span className="font-material-icons text-2xl text-[#D4755B] mr-2">smart_toy</span>
                   {import.meta.env.PROD ? 'AI Property Hub' : 'Try AI Search'}
-                </Link>
+                </Link> */}
               </motion.div>
 
               {/* Social Proof */}
