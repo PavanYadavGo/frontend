@@ -33,7 +33,7 @@ const Navbar: React.FC = () => {
   const navLinks = [
     { path: '/', label: 'Home' },
     { path: '/properties', label: 'Properties' },
-    { path: '/ai-hub', label: 'AI Property Hub' },
+    // { path: '/ai-hub', label: 'AI Property Hub' },
     { path: '/about', label: 'About' },
     { path: '/contact', label: 'Contact' },
   ];
@@ -43,7 +43,7 @@ const Navbar: React.FC = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      style={{ backgroundColor: `rgba(255, 255, 255, ${bgOpacity.get()})`, backdropFilter: backdropBlur }}
+      style={{ backgroundColor: `rgba(50, 42, 89, ${bgOpacity.get()})`, backdropFilter: backdropBlur }}
       className="sticky top-0 z-50 border-b border-[#E6D5C3]"
     >
       <div className="max-w-[1280px] mx-auto px-8 flex items-center justify-between h-20">
@@ -66,7 +66,7 @@ const Navbar: React.FC = () => {
               className={`font-manrope transition-colors ${
                 isActive(link.path)
                   ? 'text-[#D4755B] font-semibold'
-                  : 'text-[#374151] hover:text-[#D4755B]'
+                  : 'text-[#ffff] hover:text-[#D4755B]'
               }`}
             >
               {link.label}
@@ -83,7 +83,7 @@ const Navbar: React.FC = () => {
                 className={`font-manrope transition-colors ${
                   isActive('/my-listings')
                     ? 'text-[#D4755B] font-semibold'
-                    : 'text-[#374151] hover:text-[#D4755B]'
+                    : 'text-[#ffff] hover:text-[#D4755B]'
                 }`}
               >
                 My Listings
@@ -96,7 +96,7 @@ const Navbar: React.FC = () => {
               </Link>
               <button
                 onClick={handleLogout}
-                className="font-manrope font-semibold text-[#374151] hover:text-[#D4755B] transition-colors px-4 py-2"
+                className="font-manrope font-semibold text-[#ffff] hover:text-[#D4755B] transition-colors px-4 py-2"
               >
                 Logout
               </button>
@@ -105,7 +105,7 @@ const Navbar: React.FC = () => {
             <>
               <Link
                 to="/signin"
-                className="font-manrope font-semibold text-[#374151] hover:text-[#D4755B] transition-colors px-4 py-2"
+                className="font-manrope font-semibold text-[#ffff] hover:text-[#D4755B] transition-colors px-4 py-2"
               >
                 Sign In
               </Link>
