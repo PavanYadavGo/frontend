@@ -157,9 +157,7 @@ useEffect(() => {
 
               {/* Description */}
               <motion.p variants={itemVariants} className="font-manrope font-light text-xl leading-7 text-[#4b5563] mb-12 max-w-[676px]">
-                Experience the future of real estate. Our proprietary AI curates the market's
-                finest listings tailored specifically to your lifestyle, removing the noise from
-                your property search.
+                Explore a carefully curated selection of properties designed to match your lifestyle and needs, making your journey to finding the perfect home simpler and more enjoyable.
               </motion.p>
 
               {/* CTA Buttons */}
