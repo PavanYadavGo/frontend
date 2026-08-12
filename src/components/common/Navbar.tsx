@@ -82,8 +82,8 @@ const Navbar: React.FC = () => {
                 to="/my-listings"
                 className={`font-manrope transition-colors ${
                   isActive('/my-listings')
-                    ? 'text-[#D4755B] font-semibold'
-                    : 'text-[#ffff] hover:text-[#D4755B]'
+                    ? 'text-[#f1c888] font-semibold'
+                    : 'text-[#ffff] hover:text-[#f1c888]'
                 }`}
               >
                 My Listings
