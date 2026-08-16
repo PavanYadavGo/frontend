@@ -242,7 +242,7 @@ useEffect(() => {
 
   <AutoAwesome sx={{ fontSize: 18 }} />
 
-  <span className="text-sm font-semibold">
+  <span className="text-sm font-semibold text-[#322A59]">
     AI Match {slides[current].ai}
   </span>
 
