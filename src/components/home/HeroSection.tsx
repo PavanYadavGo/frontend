@@ -162,7 +162,7 @@ useEffect(() => {
 
               {/* CTA Buttons */}
               <motion.div variants={itemVariants} className="flex flex-wrap gap-4 mb-10">
-                <Link to="/properties" className="bg-[#f1c888] text-white font-manrope font-bold text-lg px-8 py-4 rounded-xl shadow-[0px_10px_15px_-3px_rgba(212,117,91,0.25),0px_4px_6px_-4px_rgba(212,117,91,0.25)] hover:bg-[#DFAF73] transition-all hover:shadow-xl inline-flex items-center">
+                <Link to="/properties" className="bg-[#f1c888] text-[#322A59] font-manrope font-bold text-lg px-8 py-4 rounded-xl shadow-[0px_10px_15px_-3px_rgba(212,117,91,0.25),0px_4px_6px_-4px_rgba(212,117,91,0.25)] hover:bg-[#DFAF73] transition-all hover:shadow-xl inline-flex items-center">
                   Explore Properties
                   <span className="font-material-icons text-sm ml-2">arrow_forward</span>
                 </Link>
@@ -238,7 +238,7 @@ useEffect(() => {
 
         </div>
 
-        <div className="flex items-center gap-2 bg-[#D4755B]/90 backdrop-blur-md px-4 py-2 rounded-full shadow-lg">
+        <div className="flex items-center gap-2 bg-[#f1c888]/90 backdrop-blur-md px-4 py-2 rounded-full shadow-lg">
 
   <AutoAwesome sx={{ fontSize: 18 }} />
 
@@ -311,7 +311,7 @@ useEffect(() => {
           onClick={() => setCurrent(i)}
           className={`h-2.5 rounded-full transition-all duration-300 ${
             current === i
-? "bg-[#D4755B] w-10"
+? "bg-[#f1c888] w-10"
 : "bg-white/40 w-2.5"
           }`}
         />
