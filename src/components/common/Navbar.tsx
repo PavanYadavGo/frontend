@@ -90,13 +90,13 @@ const Navbar: React.FC = () => {
               </Link>
               <Link
                 to="/add-property"
-                className="bg-[#f1c888] text-white font-manrope font-bold px-5 py-2 rounded-lg hover:bg-[#DFAF73] transition-all hover:shadow-lg"
+                className="bg-[#f1c888] text-[#322A59] font-manrope font-bold px-5 py-2 rounded-lg hover:bg-[#DFAF73] transition-all hover:shadow-lg"
               >
                 + List Property
               </Link>
               <button
                 onClick={handleLogout}
-                className="font-manrope font-semibold text-[#322A59] hover:text-[#f1c888] transition-colors px-4 py-2"
+                className="font-manrope font-semibold text-[#ffff] hover:text-[#f1c888] transition-colors px-4 py-2"
               >
                 Logout
               </button>
