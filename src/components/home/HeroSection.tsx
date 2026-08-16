@@ -222,7 +222,7 @@ useEffect(() => {
 
         <div>
 
-          <h2 className="font-fraunces text-3xl">
+          <h2 className="font-fraunces text-3xl text-white">
             {slides[current].title}
           </h2>
 
