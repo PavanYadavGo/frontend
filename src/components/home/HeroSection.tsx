@@ -151,7 +151,7 @@ useEffect(() => {
               {/* Heading */}
               <motion.h1 variants={itemVariants} className="font-fraunces text-[56px] lg:text-[70px] leading-[1.1] text-[#111827] mb-8">
                 Find Your<br />
-                <span className="italic text-[##f1c888]">Perfect Home</span> with <br />
+                <span className="italic text-[#f1c888]">Perfect Home</span> with <br />
                 Foundation | XBR
               </motion.h1>
 
