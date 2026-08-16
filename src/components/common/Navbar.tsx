@@ -66,7 +66,7 @@ const Navbar: React.FC = () => {
               className={`font-manrope transition-colors ${
                 isActive(link.path)
                   ? 'text-[#f1c888] font-semibold'
-                  : 'text-[#ffff] hover:text-[#f1c888]'
+                  : 'text-[#ffff] hover:text-[##DFAF73]'
               }`}
             >
               {link.label}
@@ -83,20 +83,20 @@ const Navbar: React.FC = () => {
                 className={`font-manrope transition-colors ${
                   isActive('/my-listings')
                     ? 'text-[#f1c888] font-semibold'
-                    : 'text-[#ffff] hover:text-[#f1c888]'
+                    : 'text-[#ffff] hover:text-[##DFAF73]'
                 }`}
               >
                 My Listings
               </Link>
               <Link
                 to="/add-property"
-                className="bg-[#D4755B] text-white font-manrope font-bold px-5 py-2 rounded-lg hover:bg-[#B86851] transition-all hover:shadow-lg"
+                className="bg-[##f1c888] text-white font-manrope font-bold px-5 py-2 rounded-lg hover:bg-[##DFAF73] transition-all hover:shadow-lg"
               >
                 + List Property
               </Link>
               <button
                 onClick={handleLogout}
-                className="font-manrope font-semibold text-[#ffff] hover:text-[#D4755B] transition-colors px-4 py-2"
+                className="font-manrope font-semibold text-[#ffff] hover:text-[#f1c888] transition-colors px-4 py-2"
               >
                 Logout
               </button>
@@ -105,13 +105,13 @@ const Navbar: React.FC = () => {
             <>
               <Link
                 to="/signin"
-                className="font-manrope font-semibold text-[#ffff] hover:text-[#D4755B] transition-colors px-4 py-2"
+                className="font-manrope font-semibold text-[#ffff] hover:text-[#f1c888] transition-colors px-4 py-2"
               >
                 Sign In
               </Link>
               <Link
                 to="/signup"
-                className="bg-[#D4755B] text-white font-manrope font-bold px-6 py-2 rounded-lg hover:bg-[#B86851] transition-all hover:shadow-lg"
+                className="bg-[#f1c888] text-white font-manrope font-bold px-6 py-2 rounded-lg hover:bg-[##DFAF73] transition-all hover:shadow-lg"
               >
                 Sign Up
               </Link>
@@ -121,7 +121,7 @@ const Navbar: React.FC = () => {
 
         {/* Mobile Menu Button */}
         <button 
-          className="md:hidden p-2 text-[#374151] hover:text-[#D4755B] transition-colors"
+          className="md:hidden p-2 text-[#374151] hover:text-[#f1c888] transition-colors"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
           <span className="font-material-icons text-2xl">
@@ -139,8 +139,8 @@ const Navbar: React.FC = () => {
               to={link.path}
               className={`font-manrope text-lg py-2 transition-colors ${
                 isActive(link.path)
-                  ? 'text-[#D4755B] font-semibold'
-                  : 'text-[#374151] hover:text-[#D4755B]'
+                  ? 'text-[#f1c888] font-semibold'
+                  : 'text-[#374151] hover:text-[#f1c888]'
               }`}
               onClick={closeMobileMenu}
             >
@@ -155,21 +155,21 @@ const Navbar: React.FC = () => {
                 </span>
                 <Link
                   to="/my-listings"
-                  className="font-manrope font-semibold text-[#374151] hover:text-[#D4755B] transition-colors py-2"
+                  className="font-manrope font-semibold text-[#374151] hover:text-[#f1c888] transition-colors py-2"
                   onClick={closeMobileMenu}
                 >
                   My Listings
                 </Link>
                 <Link
                   to="/add-property"
-                  className="bg-[#D4755B] text-white font-manrope font-bold px-6 py-3 rounded-lg hover:bg-[#B86851] transition-all hover:shadow-lg text-center"
+                  className="bg-[#f1c888] text-white font-manrope font-bold px-6 py-3 rounded-lg hover:bg-[##DFAF73] transition-all hover:shadow-lg text-center"
                   onClick={closeMobileMenu}
                 >
                   + List Property
                 </Link>
                 <button
                   onClick={handleLogout}
-                  className="font-manrope font-semibold text-[#374151] hover:text-[#D4755B] transition-colors py-2 text-left"
+                  className="font-manrope font-semibold text-[#374151] hover:text-[##f1c888] transition-colors py-2 text-left"
                 >
                   Logout
                 </button>
@@ -178,14 +178,14 @@ const Navbar: React.FC = () => {
               <>
                 <Link
                   to="/signin"
-                  className="font-manrope font-semibold text-[#374151] hover:text-[#D4755B] transition-colors py-2"
+                  className="font-manrope font-semibold text-[#374151] hover:text-[##f1c888] transition-colors py-2"
                   onClick={closeMobileMenu}
                 >
                   Sign In
                 </Link>
                 <Link
                   to="/signup"
-                  className="bg-[#D4755B] text-white font-manrope font-bold px-6 py-3 rounded-lg hover:bg-[#B86851] transition-all hover:shadow-lg text-center"
+                  className="bg-[##f1c888] text-white font-manrope font-bold px-6 py-3 rounded-lg hover:bg-[##DFAF73] transition-all hover:shadow-lg text-center"
                   onClick={closeMobileMenu}
                 >
                   Sign Up
