@@ -151,7 +151,7 @@ useEffect(() => {
               {/* Heading */}
               <motion.h1 variants={itemVariants} className="font-fraunces text-[56px] lg:text-[70px] leading-[1.1] text-[#111827] mb-8">
                 Find Your<br />
-                <span className="italic text-[#D4755B]">Perfect Home</span> with <br />
+                <span className="italic text-[##f1c888]">Perfect Home</span> with <br />
                 Foundation | XBR
               </motion.h1>
 
@@ -162,7 +162,7 @@ useEffect(() => {
 
               {/* CTA Buttons */}
               <motion.div variants={itemVariants} className="flex flex-wrap gap-4 mb-10">
-                <Link to="/properties" className="bg-[#D4755B] text-white font-manrope font-bold text-lg px-8 py-4 rounded-xl shadow-[0px_10px_15px_-3px_rgba(212,117,91,0.25),0px_4px_6px_-4px_rgba(212,117,91,0.25)] hover:bg-[#B86851] transition-all hover:shadow-xl inline-flex items-center">
+                <Link to="/properties" className="bg-[#f1c888] text-white font-manrope font-bold text-lg px-8 py-4 rounded-xl shadow-[0px_10px_15px_-3px_rgba(212,117,91,0.25),0px_4px_6px_-4px_rgba(212,117,91,0.25)] hover:bg-[#DFAF73] transition-all hover:shadow-xl inline-flex items-center">
                   Explore Properties
                   <span className="font-material-icons text-sm ml-2">arrow_forward</span>
                 </Link>
