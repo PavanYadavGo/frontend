@@ -31,7 +31,7 @@ const Footer: React.FC = () => {
                 href="https://facebook.com" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-[rgba(255,255,255,0.05)] hover:bg-[#D4755B] border border-[rgba(255,255,255,0.1)] rounded-lg flex items-center justify-center transition-all group"
+                className="w-10 h-10 bg-[rgba(255,255,255,0.05)] hover:bg-[#f1c888] border border-[rgba(255,255,255,0.1)] rounded-lg flex items-center justify-center transition-all group"
               >
                 <Facebook className="w-5 h-5 text-[#9ca3af] group-hover:text-white transition-colors" />
               </a>
@@ -39,7 +39,7 @@ const Footer: React.FC = () => {
                 href="https://twitter.com" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-[rgba(255,255,255,0.05)] hover:bg-[#D4755B] border border-[rgba(255,255,255,0.1)] rounded-lg flex items-center justify-center transition-all group"
+                className="w-10 h-10 bg-[rgba(255,255,255,0.05)] hover:bg-[#f1c888] border border-[rgba(255,255,255,0.1)] rounded-lg flex items-center justify-center transition-all group"
               >
                 <Twitter className="w-5 h-5 text-[#9ca3af] group-hover:text-white transition-colors" />
               </a>
@@ -47,7 +47,7 @@ const Footer: React.FC = () => {
                 href="https://instagram.com" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-[rgba(255,255,255,0.05)] hover:bg-[#D4755B] border border-[rgba(255,255,255,0.1)] rounded-lg flex items-center justify-center transition-all group"
+                className="w-10 h-10 bg-[rgba(255,255,255,0.05)] hover:bg-[#f1c888] border border-[rgba(255,255,255,0.1)] rounded-lg flex items-center justify-center transition-all group"
               >
                 <Instagram className="w-5 h-5 text-[#9ca3af] group-hover:text-white transition-colors" />
               </a>
@@ -55,7 +55,7 @@ const Footer: React.FC = () => {
                 href="https://linkedin.com" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-[rgba(255,255,255,0.05)] hover:bg-[#D4755B] border border-[rgba(255,255,255,0.1)] rounded-lg flex items-center justify-center transition-all group"
+                className="w-10 h-10 bg-[rgba(255,255,255,0.05)] hover:bg-[#f1c888] border border-[rgba(255,255,255,0.1)] rounded-lg flex items-center justify-center transition-all group"
               >
                 <Linkedin className="w-5 h-5 text-[#9ca3af] group-hover:text-white transition-colors" />
               </a>
@@ -63,7 +63,7 @@ const Footer: React.FC = () => {
                 href="https://youtube.com" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-[rgba(255,255,255,0.05)] hover:bg-[#D4755B] border border-[rgba(255,255,255,0.1)] rounded-lg flex items-center justify-center transition-all group"
+                className="w-10 h-10 bg-[rgba(255,255,255,0.05)] hover:bg-[#f1c888] border border-[rgba(255,255,255,0.1)] rounded-lg flex items-center justify-center transition-all group"
               >
                 <Youtube className="w-5 h-5 text-[#9ca3af] group-hover:text-white transition-colors" />
               </a>
@@ -113,7 +113,7 @@ const Footer: React.FC = () => {
             <ul className="space-y-4">
               <li>
                 <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" className="flex items-start gap-3 font-manrope font-extralight text-[#9ca3af] text-sm hover:text-white transition-colors group">
-                  <MapPin className="w-5 h-5 mt-0.5 flex-shrink-0 text-[#D4755B]" />
+                  <MapPin className="w-5 h-5 mt-0.5 flex-shrink-0 text-[#f1c888]" />
                   <span className="leading-relaxed">
                     Pinnacle Business Park,<br />
                     We Work,2nd Floor,<br />
@@ -123,25 +123,25 @@ const Footer: React.FC = () => {
               </li>
               <li>
                 <a href="tel:+918879240162" className="flex items-center gap-3 font-manrope font-extralight text-[#9ca3af] text-sm hover:text-white transition-colors">
-                  <Phone className="w-5 h-5 flex-shrink-0 text-[#D4755B]" />
+                  <Phone className="w-5 h-5 flex-shrink-0 text-[#f1c888]" />
                   <span>+91 8879240162</span>
                 </a>
               </li>
               <li>
                 <a href="tel:+919920429137" className="flex items-center gap-3 font-manrope font-extralight text-[#9ca3af] text-sm hover:text-white transition-colors">
-                  <Phone className="w-5 h-5 flex-shrink-0 text-[#D4755B]" />
+                  <Phone className="w-5 h-5 flex-shrink-0 text-[#f1c888]" />
                   <span>+91 9920429137</span>
                 </a>
               </li>
               <li>
                 <a href="tel:+919867779877" className="flex items-center gap-3 font-manrope font-extralight text-[#9ca3af] text-sm hover:text-white transition-colors">
-                  <Phone className="w-5 h-5 flex-shrink-0 text-[#D4755B]" />
+                  <Phone className="w-5 h-5 flex-shrink-0 text-[#f1c888]" />
                   <span>+91 9867779877</span>
                 </a>
               </li>
               <li>
                 <a href="mailto:foundationx.abr@gmail.com" className="flex items-center gap-3 font-manrope font-extralight text-[#9ca3af] text-sm hover:text-white transition-colors">
-                  <Mail className="w-5 h-5 flex-shrink-0 text-[#D4755B]" />
+                  <Mail className="w-5 h-5 flex-shrink-0 text-[#f1c888]" />
                   <span>foundationx.abr@gmail.com</span>
                 </a>
               </li>
@@ -160,12 +160,12 @@ const Footer: React.FC = () => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Your email address"
-                className="w-full bg-[rgba(255,255,255,0.05)] border border-[rgba(255,255,255,0.1)] rounded-lg px-4 py-3 font-manrope font-extralight text-sm text-white placeholder:text-[#6b7280] focus:outline-none focus:border-[#D4755B] transition-colors"
+                className="w-full bg-[rgba(255,255,255,0.05)] border border-[rgba(255,255,255,0.1)] rounded-lg px-4 py-3 font-manrope font-extralight text-sm text-white placeholder:text-[#6b7280] focus:outline-none focus:border-[#f1c888] transition-colors"
                 required
               />
               <button 
                 type="submit"
-                className="w-full bg-[#D4755B] hover:bg-[#C05621] text-white font-manrope font-bold text-sm px-4 py-3 rounded-lg transition-all shadow-lg hover:shadow-xl"
+                className="w-full bg-[#f1c888] hover:bg-[#D4755B] text-white font-manrope font-bold text-sm px-4 py-3 rounded-lg transition-all shadow-lg hover:shadow-xl"
               >
                 Subscribe
               </button>
