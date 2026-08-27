@@ -165,7 +165,7 @@ const Footer: React.FC = () => {
               />
               <button 
                 type="submit"
-                className="w-full bg-[#f1c888] hover:bg-[#DFAF73] text-white font-manrope font-bold text-sm px-4 py-3 rounded-lg transition-all shadow-lg hover:shadow-xl"
+                className="w-full bg-[#f1c888] hover:bg-[#DFAF73] text-black font-manrope font-bold text-sm px-4 py-3 rounded-lg transition-all shadow-lg hover:shadow-xl"
               >
                 Subscribe
               </button>
