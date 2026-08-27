@@ -31,41 +31,41 @@ const Footer: React.FC = () => {
                 href="https://facebook.com" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-[rgba(255,255,255,0.05)] hover:bg-[#f1c888] text-[322A59] border border-[rgba(255,255,255,0.1)] rounded-lg flex items-center justify-center transition-all group"
+                className="w-10 h-10 bg-[rgba(255,255,255,0.05)] hover:bg-[#f1c888] border border-[rgba(255,255,255,0.1)] rounded-lg flex items-center justify-center transition-all group"
               >
-                <Facebook className="w-5 h-5 text-[#9ca3af] group-hover:text-white transition-colors" />
+                <Facebook className="w-5 h-5 text-[#9ca3af] group-hover:text-black transition-colors" />
               </a>
               <a 
                 href="https://twitter.com" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-[rgba(255,255,255,0.05)] hover:bg-[#f1c888] text-[322A59] border border-[rgba(255,255,255,0.1)] rounded-lg flex items-center justify-center transition-all group"
+                className="w-10 h-10 bg-[rgba(255,255,255,0.05)] hover:bg-[#f1c888] border border-[rgba(255,255,255,0.1)] rounded-lg flex items-center justify-center transition-all group"
               >
-                <Twitter className="w-5 h-5 text-[#9ca3af] group-hover:text-white transition-colors" />
+                <Twitter className="w-5 h-5 text-[#9ca3af] group-hover:text-black transition-colors" />
               </a>
               <a 
                 href="https://instagram.com" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-[rgba(255,255,255,0.05)] hover:bg-[#f1c888] text-[322A59] border border-[rgba(255,255,255,0.1)] rounded-lg flex items-center justify-center transition-all group"
+                className="w-10 h-10 bg-[rgba(255,255,255,0.05)] hover:bg-[#f1c888] border border-[rgba(255,255,255,0.1)] rounded-lg flex items-center justify-center transition-all group"
               >
-                <Instagram className="w-5 h-5 text-[#9ca3af] group-hover:text-white transition-colors" />
+                <Instagram className="w-5 h-5 text-[#9ca3af] group-hover:text-black transition-colors" />
               </a>
               <a 
                 href="https://linkedin.com" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-[rgba(255,255,255,0.05)] hover:bg-[#f1c888] text-[322A59] border border-[rgba(255,255,255,0.1)] rounded-lg flex items-center justify-center transition-all group"
+                className="w-10 h-10 bg-[rgba(255,255,255,0.05)] hover:bg-[#f1c888] border border-[rgba(255,255,255,0.1)] rounded-lg flex items-center justify-center transition-all group"
               >
-                <Linkedin className="w-5 h-5 text-[#9ca3af] group-hover:text-white transition-colors" />
+                <Linkedin className="w-5 h-5 text-[#9ca3af] group-hover:text-black transition-colors" />
               </a>
               <a 
                 href="https://youtube.com" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-[rgba(255,255,255,0.05)] hover:bg-[#f1c888] text-[322A59] border border-[rgba(255,255,255,0.1)] rounded-lg flex items-center justify-center transition-all group"
+                className="w-10 h-10 bg-[rgba(255,255,255,0.05)] hover:bg-[#f1c888] border border-[rgba(255,255,255,0.1)] rounded-lg flex items-center justify-center transition-all group"
               >
-                <Youtube className="w-5 h-5 text-[#9ca3af] group-hover:text-white transition-colors" />
+                <Youtube className="w-5 h-5 text-[#9ca3af] group-hover:text-black transition-colors" />
               </a>
             </div>
           </div>
