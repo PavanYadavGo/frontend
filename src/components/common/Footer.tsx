@@ -19,11 +19,11 @@ const Footer: React.FC = () => {
           {/* Brand Column */}
           <div>
             <Link to="/" className="flex items-center gap-3 mb-6">
-              <img src="/logo.png" alt="BuildEstate" className="h-10 w-auto brightness-0 invert" />
-              <span className="font-fraunces text-2xl font-bold">BuildEstate</span>
+              <img src="/logo.png" alt="FoundationX" className="h-10 w-auto brightness-0 invert" />
+              <span className="font-fraunces text-2xl font-bold">FoundationX</span>
             </Link>
             <p className="font-manrope font-extralight text-[#9ca3af] text-sm leading-relaxed mb-6">
-              AI-powered luxury real estate platform connecting you with your dream home through intelligent matching and personalized recommendations.
+              A premium luxury real estate platform connecting you with exceptional properties through curated listings and personalized property experiences.
             </p>
             {/* Social Links */}
             <div className="flex gap-3">
@@ -31,7 +31,7 @@ const Footer: React.FC = () => {
                 href="https://facebook.com" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-[rgba(255,255,255,0.05)] hover:bg-[#f1c888] border border-[rgba(255,255,255,0.1)] rounded-lg flex items-center justify-center transition-all group"
+                className="w-10 h-10 bg-[rgba(255,255,255,0.05)] hover:bg-[#f1c888] text-[322A59] border border-[rgba(255,255,255,0.1)] rounded-lg flex items-center justify-center transition-all group"
               >
                 <Facebook className="w-5 h-5 text-[#9ca3af] group-hover:text-white transition-colors" />
               </a>
@@ -39,7 +39,7 @@ const Footer: React.FC = () => {
                 href="https://twitter.com" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-[rgba(255,255,255,0.05)] hover:bg-[#f1c888] border border-[rgba(255,255,255,0.1)] rounded-lg flex items-center justify-center transition-all group"
+                className="w-10 h-10 bg-[rgba(255,255,255,0.05)] hover:bg-[#f1c888] text-[322A59] border border-[rgba(255,255,255,0.1)] rounded-lg flex items-center justify-center transition-all group"
               >
                 <Twitter className="w-5 h-5 text-[#9ca3af] group-hover:text-white transition-colors" />
               </a>
@@ -47,7 +47,7 @@ const Footer: React.FC = () => {
                 href="https://instagram.com" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-[rgba(255,255,255,0.05)] hover:bg-[#f1c888] border border-[rgba(255,255,255,0.1)] rounded-lg flex items-center justify-center transition-all group"
+                className="w-10 h-10 bg-[rgba(255,255,255,0.05)] hover:bg-[#f1c888] text-[322A59] border border-[rgba(255,255,255,0.1)] rounded-lg flex items-center justify-center transition-all group"
               >
                 <Instagram className="w-5 h-5 text-[#9ca3af] group-hover:text-white transition-colors" />
               </a>
@@ -55,7 +55,7 @@ const Footer: React.FC = () => {
                 href="https://linkedin.com" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-[rgba(255,255,255,0.05)] hover:bg-[#f1c888] border border-[rgba(255,255,255,0.1)] rounded-lg flex items-center justify-center transition-all group"
+                className="w-10 h-10 bg-[rgba(255,255,255,0.05)] hover:bg-[#f1c888] text-[322A59] border border-[rgba(255,255,255,0.1)] rounded-lg flex items-center justify-center transition-all group"
               >
                 <Linkedin className="w-5 h-5 text-[#9ca3af] group-hover:text-white transition-colors" />
               </a>
@@ -63,7 +63,7 @@ const Footer: React.FC = () => {
                 href="https://youtube.com" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="w-10 h-10 bg-[rgba(255,255,255,0.05)] hover:bg-[#f1c888] border border-[rgba(255,255,255,0.1)] rounded-lg flex items-center justify-center transition-all group"
+                className="w-10 h-10 bg-[rgba(255,255,255,0.05)] hover:bg-[#f1c888] text-[322A59] border border-[rgba(255,255,255,0.1)] rounded-lg flex items-center justify-center transition-all group"
               >
                 <Youtube className="w-5 h-5 text-[#9ca3af] group-hover:text-white transition-colors" />
               </a>
@@ -180,7 +180,7 @@ const Footer: React.FC = () => {
         <div className="border-t border-[rgba(255,255,255,0.1)] pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="font-manrope font-extralight text-[#6b7280] text-sm text-center md:text-left">
-              © 2026 BuildEstate. All rights reserved. Powered by AI.
+              © 2026 FoundationX | XBR. All rights reserved.
             </p>
             <div className="flex flex-wrap justify-center gap-6">
               <a href="#" className="font-manrope font-extralight text-[#6b7280] text-sm hover:text-white transition-colors">
