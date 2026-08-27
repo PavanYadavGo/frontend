@@ -11,10 +11,13 @@ import {
   ChevronRight
 } from "@mui/icons-material";
 
-import hero1 from '../../images/hero/hero1.jpg';
-import hero2 from '../../images/hero/hero2.jpg';
-import hero3 from '../../images/hero/hero3.jpg';
-import hero4 from '../../images/hero/hero4.jpg';
+import hero1 from '../../images/prop/IMG_5.jpeg';
+import hero2 from '../../images/prop/IMG_6.jpeg';
+import hero3 from '../../images/prop/IMG_7.jpeg';
+import hero4 from '../../images/prop/IMG_8.jpeg';
+import hero5 from '../../images/prop/IMG_9.jpeg';
+import hero6 from '../../images/prop/IMG_10.jpeg';
+import hero7 from '../../images/prop/IMG_11.jpeg';
 
 import happyHomeowner1 from '../../images/Happy Homeowners_1.jpg';
 import happyHomeowner2 from '../../images/Happy Homeowners_2.jpg';
@@ -54,6 +57,30 @@ const slides = [
   },
   {
     image: hero4,
+    title: "Signature Collection",
+    location: "Goa",
+    ai: "96%",
+    beds: 4,
+    baths: 3
+  },
+    {
+    image: hero5,
+    title: "Signature Collection",
+    location: "Goa",
+    ai: "96%",
+    beds: 4,
+    baths: 3
+  },
+    {
+    image: hero6,
+    title: "Signature Collection",
+    location: "Goa",
+    ai: "96%",
+    beds: 4,
+    baths: 3
+  },
+    {
+    image: hero7,
     title: "Signature Collection",
     location: "Goa",
     ai: "96%",
