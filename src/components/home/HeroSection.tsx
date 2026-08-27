@@ -33,56 +33,56 @@ const propertyImages = [
 const slides = [
   {
     image: hero1,
-    title: "Premium Residence",
-    location: "Bandra, Mumbai",
+    title: "Krishna Kunj",
+    location: "Near Saharaj Sweet Store, Bhayander(w), Mumbai",
     ai: "99%",
     beds: 5,
     baths: 4
   },
   {
     image: hero2,
-    title: "Luxury Apartment",
-    location: "Powai, Mumbai",
+    title: "Mahaganapati Tower",
+    location: "Near Mary Gully Lane, Bhayander(w), Mumbai",
     ai: "97%",
     beds: 3,
     baths: 2
   },
   {
     image: hero3,
-    title: "Modern Living",
-    location: "Worli, Mumbai",
+    title: "Bharav Shruti Complex",
+    location: "Near D-Mart, Bhayander(w), Mumbai",
     ai: "98%",
     beds: 4,
     baths: 4
   },
   {
     image: hero4,
-    title: "Signature Collection",
-    location: "Goa",
+    title: "Narayan Smruti",
+    location: "OPP Atlake Hotel, Bhayander(w), Mumbai",
     ai: "96%",
     beds: 4,
     baths: 3
   },
     {
     image: hero5,
-    title: "Signature Collection",
-    location: "Goa",
+    title: "PavaPuri Tower",
+    location: "Near Bjp Office, Bhayander(w), Mumbai",
     ai: "96%",
     beds: 4,
     baths: 3
   },
     {
     image: hero6,
-    title: "Signature Collection",
-    location: "Goa",
+    title: "Malti Tower",
+    location: "OPP Atlake Hotel, Bhayander(w), Mumbai",
     ai: "96%",
     beds: 4,
     baths: 3
   },
     {
     image: hero7,
-    title: "Signature Collection",
-    location: "Goa",
+    title: "Prathmesh Orchid",
+    location: "Tamba Road, Bhayander(w), Mumbai",
     ai: "96%",
     beds: 4,
     baths: 3
