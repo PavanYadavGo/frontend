@@ -30,7 +30,7 @@ const AboutValuesSection: React.FC = () => {
         {/* Section Header */}
         <div className="text-center mb-14 md:mb-16">
 
-          <div className="font-space-mono text-xs text-[#D4755B] uppercase tracking-[0.2em] mb-4">
+          <div className="font-space-mono text-xs text-[#f1c888] uppercase tracking-[0.2em] mb-4">
             What We Stand For
           </div>
 
