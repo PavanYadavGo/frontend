@@ -33,7 +33,7 @@ const AboutUsPage: React.FC = () => {
       <AboutValuesSection />
 
       {/* AI Intelligence Section */}
-      <AboutAISection />
+      {/* <AboutAISection /> */}
 
       {/* CTA Section */}
       <AboutCTASection />
