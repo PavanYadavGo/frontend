@@ -6,51 +6,77 @@ const AIIntelligenceSection: React.FC = () => {
       <div className="max-w-[1280px] mx-auto px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <div className="font-space-mono text-sm text-[#D4755B] uppercase tracking-widest mb-4">Why Choose AI?</div>
-          <h2 className="font-fraunces text-5xl text-[#111827] mb-6">AI-Powered Property Intelligence</h2>
+          <div className="font-space-mono text-sm text-[#f1c888] uppercase tracking-widest mb-4">
+            Why Choose Us?
+          </div>
+
+          <h2 className="font-fraunces text-5xl text-[#111827] mb-6">
+            Smarter Property Discovery
+          </h2>
+
           <p className="font-manrope font-light text-lg text-[#4b5563] max-w-[740px] mx-auto">
-            We leverage advanced algorithms to give you a competitive edge in the market, turning data
-            into your dream home.
+            We bring together property listings, market information, and location data
+            to help you discover the right property with confidence.
           </p>
         </div>
 
         {/* Features Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+
           {/* Feature 1 */}
           <div className="bg-white border border-[#f3f4f6] rounded-2xl p-8 shadow-[0px_20px_25px_-5px_rgba(229,231,235,0.5)]">
             <div className="w-14 h-14 bg-[rgba(212,117,91,0.1)] rounded-xl flex items-center justify-center mb-6">
-              <span className="font-material-icons text-3xl text-[#D4755B]">query_stats</span>
+              <span className="font-material-icons text-3xl text-[#f1c888]">
+                query_stats
+              </span>
             </div>
-            <h3 className="font-syne font-bold text-2xl text-[#111827] mb-4">Live Market Scraping</h3>
+
+            <h3 className="font-syne font-bold text-2xl text-[#111827] mb-4">
+              Live Property Data
+            </h3>
+
             <p className="font-manrope text-base text-[#6b7280] leading-relaxed">
-              Real-time data feeds from every major listing source, aggregating hidden gems before
-              they hit the mainstream market.
+              Stay up to date with property listings and market information,
+              making it easier to compare opportunities as they appear.
             </p>
           </div>
 
           {/* Feature 2 */}
           <div className="bg-white border border-[#f3f4f6] rounded-2xl p-8 shadow-[0px_20px_25px_-5px_rgba(229,231,235,0.5)]">
             <div className="w-14 h-14 bg-[rgba(212,117,91,0.1)] rounded-xl flex items-center justify-center mb-6">
-              <span className="font-material-icons text-3xl text-[#D4755B]">psychology</span>
+              <span className="font-material-icons text-3xl text-[#f1c888]">
+                compare_arrows
+              </span>
             </div>
-            <h3 className="font-syne font-bold text-2xl text-[#111827] mb-4">Expert AI Insights</h3>
+
+            <h3 className="font-syne font-bold text-2xl text-[#111827] mb-4">
+              Easy Property Comparison
+            </h3>
+
             <p className="font-manrope text-base text-[#6b7280] leading-relaxed">
-              Predictive analytics on value appreciation and investment potential, tailored to your
-              financial goals.
+              Compare properties across price, location, size, amenities, and
+              other important details before making your decision.
             </p>
           </div>
 
           {/* Feature 3 */}
           <div className="bg-white border border-[#f3f4f6] rounded-2xl p-8 shadow-[0px_20px_25px_-5px_rgba(229,231,235,0.5)]">
             <div className="w-14 h-14 bg-[rgba(212,117,91,0.1)] rounded-xl flex items-center justify-center mb-6">
-              <span className="font-material-icons text-3xl text-[#D4755B]">location_city</span>
+              <span className="font-material-icons text-3xl text-[#f1c888]">
+                location_city
+              </span>
             </div>
-            <h3 className="font-syne font-bold text-2xl text-[#111827] mb-4">Best Area Suggestions</h3>
+
+            <h3 className="font-syne font-bold text-2xl text-[#111827] mb-4">
+              Explore Better Locations
+            </h3>
+
             <p className="font-manrope text-base text-[#6b7280] leading-relaxed">
-              Neighborhood matching based on your lifestyle habits, commute preferences, and
-              local amenities.
+              Discover properties across different neighborhoods and evaluate
+              locations based on connectivity, amenities, and your preferences.
             </p>
           </div>
+
         </div>
       </div>
     </section>
