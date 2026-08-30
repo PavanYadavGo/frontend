@@ -15,7 +15,7 @@ const CTASection: React.FC = () => {
       />
 
       {/* Warm Overlay */}
-      <div className="absolute inset-0 z-[1] bg-gradient-to-br from-[#111827]/95 via-[#5C382F]/80 to-[#f1c888]/75" />
+      <div className="absolute inset-0 z-[1] bg-gradient-to-br from-[#111827]/95 via-[#8B6F47]/80 to-[#f1c888]/75" />
 
       {/* Decorative Glow */}
       <div className="absolute -top-40 -right-40 z-[2] w-[420px] h-[420px] rounded-full bg-[#f1c888]/10 blur-3xl pointer-events-none" />

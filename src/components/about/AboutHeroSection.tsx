@@ -14,7 +14,7 @@ const AboutHeroSection: React.FC = () => {
       />
 
       {/* Warm Brand Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#111827]/95 via-[#6F3F32]/80 to-[#f1c888]/70" />
+      <div className="absolute inset-0 bg-gradient-to-br from-[#111827]/95 via-[#8B6F47]/80 to-[#A84F38]/70" />
 
       {/* Subtle Darkening */}
       <div className="absolute inset-0 bg-black/10" />
