@@ -1,6 +1,6 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
-import abstractImage from '../../images/Abstract architectural texture with light and shadow.png';
+import abstractImage from '../../images/prop/Abstract.png';
 
 const CTASection: React.FC = () => {
   return (
