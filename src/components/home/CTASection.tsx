@@ -4,21 +4,21 @@ import abstractImage from '../../images/prop/Abstract.png';
 
 const CTASection: React.FC = () => {
   return (
-    <section className="relative overflow-hidden bg-[#EC4613] py-24">
+    <section className="relative overflow-hidden bg-[#A84F38] py-24">
 
       {/* Background Image */}
       <img
         src={abstractImage}
         alt=""
         aria-hidden="true"
-        className="absolute inset-0 z-0 h-full w-full object-cover opacity-100 mix-blend-overlay pointer-events-none"
+        className="absolute inset-0 z-0 h-full w-full object-cover opacity-60 pointer-events-none"
       />
 
-      {/* Background Overlay */}
-      <div className="absolute inset-0 z-[1] bg-[#EC4613]/20 pointer-events-none" />
+      {/* Soft Overlay */}
+      <div className="absolute inset-0 z-[1] bg-[#7F3A2B]/35 pointer-events-none" />
 
-      {/* Decorative Shape */}
-      <div className="absolute -top-32 -left-32 z-[2] h-96 w-96 rounded-full bg-white/10 blur-3xl pointer-events-none" />
+      {/* Decorative Glow */}
+      <div className="absolute -top-32 -left-32 z-[2] h-96 w-96 rounded-full bg-[#f1c888]/10 blur-3xl pointer-events-none" />
 
       {/* Content */}
       <div className="relative z-10 mx-auto max-w-[1280px] px-8 text-center">
@@ -36,14 +36,14 @@ const CTASection: React.FC = () => {
 
           <Link
             to="/signup"
-            className="bg-white text-[#C05621] font-manrope font-bold text-lg px-10 py-4 rounded-xl shadow-[0px_10px_15px_-3px_rgba(0,0,0,0.1)] hover:shadow-2xl hover:-translate-y-0.5 transition-all inline-block"
+            className="bg-white text-[#8F4532] font-manrope font-bold text-lg px-10 py-4 rounded-xl shadow-[0px_10px_15px_-3px_rgba(0,0,0,0.15)] hover:shadow-2xl hover:-translate-y-0.5 transition-all inline-block"
           >
             Get Started
           </Link>
 
           <Link
             to="/contact"
-            className="border-2 border-white text-white font-manrope font-bold text-lg px-10 py-4 rounded-xl hover:bg-white hover:text-[#C05621] transition-all inline-block"
+            className="border-2 border-white text-white font-manrope font-bold text-lg px-10 py-4 rounded-xl hover:bg-white hover:text-[#8F4532] transition-all inline-block"
           >
             Schedule a Demo
           </Link>
