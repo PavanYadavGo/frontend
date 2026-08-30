@@ -107,7 +107,7 @@ const SignUpForm: React.FC<SignUpFormProps> = ({ onSubmit }) => {
         <div className="relative">
           <Phone className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-[#94A3B8]" />
           <input
-            type="phone"
+            type="tel"
             name="phone"
             value={formData.phone}
             onChange={handleInputChange}
