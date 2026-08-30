@@ -28,10 +28,10 @@ const Footer: React.FC = () => {
     <footer className="bg-[#111827] text-white">
 
       {/* Main Footer */}
-      <div className="max-w-[1280px] mx-auto px-6 md:px-8 py-16 md:py-20">
+      <div className="max-w-[1280px] mx-auto px-6 md:px-8 py-12 md:py-14">
 
         {/* Top Brand Statement */}
-        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 pb-14 mb-14 border-b border-white/10">
+        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 pb-10 mb-10 border-b border-white/10">
 
           <div className="max-w-[680px]">
             <div className="flex items-center gap-3 mb-6">
@@ -48,7 +48,7 @@ const Footer: React.FC = () => {
               </Link>
             </div>
 
-            <h2 className="font-fraunces text-3xl md:text-4xl leading-tight text-white mb-4">
+            <h2 className="font-fraunces text-2xl md:text-3xl leading-tight text-white mb-4">
               Find a place that feels like home.
             </h2>
 
@@ -69,7 +69,7 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Content Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-8">
 
           {/* Brand / Social */}
           <div>
@@ -242,7 +242,7 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-white/10 mt-14 pt-8">
+        <div className="border-t border-white/10 mt-10 pt-6">
 
           <div className="flex flex-col md:flex-row justify-between items-center gap-5">
 
