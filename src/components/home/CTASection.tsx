@@ -6,7 +6,7 @@ const CTASection: React.FC = () => {
     <section className="bg-[#EC4613] py-24 relative overflow-hidden">
       {/* Background Pattern */}
         <img 
-          src="/src/images/Abstract architectural texture with light and shadow.png" 
+          src="/src/images/Abstract.png" 
           alt="Background Texture"
           className="absolute inset-0 w-full h-full object-cover mix-blend-overlay"
         />
