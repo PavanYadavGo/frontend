@@ -192,48 +192,11 @@ const Footer: React.FC = () => {
 
             <ul className="space-y-5">
 
-              <li>
-                <a
-                  href="https://maps.google.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-start gap-3 font-manrope font-light text-[#9ca3af] text-sm hover:text-white transition-colors"
-                >
-                  <MapPin className="w-5 h-5 mt-0.5 flex-shrink-0 text-[#f1c888]" />
+              <li> <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" className="flex items-start gap-3 font-manrope font-light text-[#9ca3af] text-sm hover:text-white transition-colors" > <MapPin className="w-5 h-5 mt-0.5 flex-shrink-0 text-[#f1c888]" /> <span className="leading-relaxed"> Pinnacle Business Park, <br /> We Work, 2nd Floor, <br /> Andheri, Mumbai, <br /> Maharashtra 400093 </span> </a> </li>
 
-                  <span className="leading-relaxed">
-                    Pinnacle Business Park,
-                    <br />
-                    We Work, 2nd Floor,
-                    <br />
-                    Andheri, Mumbai,
-                    <br />
-                    Maharashtra 400093
-                  </span>
-                </a>
-              </li>
+              <li className="space-y-4"> {/* Sales */} <a href="tel:+918879240162" className="flex items-center gap-3 group" > <div className="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0 group-hover:bg-[#f1c888] transition-colors"> <Phone className="w-4 h-4 text-[#f1c888] group-hover:text-[#111827] transition-colors" /> </div> <div> <p className="font-manrope text-[11px] uppercase tracking-wider text-[#6b7280] mb-0.5"> Sales & Properties </p> <p className="font-manrope font-light text-sm text-[#9ca3af] group-hover:text-white transition-colors"> +91 8879240162 </p> </div> </a> {/* Support */} <a href="tel:+919920429137" className="flex items-center gap-3 group" > <div className="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0 group-hover:bg-[#f1c888] transition-colors"> <Phone className="w-4 h-4 text-[#f1c888] group-hover:text-[#111827] transition-colors" /> </div> <div> <p className="font-manrope text-[11px] uppercase tracking-wider text-[#6b7280] mb-0.5"> Customer Support </p> <p className="font-manrope font-light text-sm text-[#9ca3af] group-hover:text-white transition-colors"> +91 9920429137 </p> </div> </a> {/* General */} <a href="tel:+919867779877" className="flex items-center gap-3 group" > <div className="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0 group-hover:bg-[#f1c888] transition-colors"> <Phone className="w-4 h-4 text-[#f1c888] group-hover:text-[#111827] transition-colors" /> </div> <div> <p className="font-manrope text-[11px] uppercase tracking-wider text-[#6b7280] mb-0.5"> General Enquiries </p> <p className="font-manrope font-light text-sm text-[#9ca3af] group-hover:text-white transition-colors"> +91 9867779877 </p> </div> </a> </li>
 
-              <li>
-                <a
-                  href="tel:+918879240162"
-                  className="flex items-center gap-3 font-manrope font-light text-[#9ca3af] text-sm hover:text-white transition-colors"
-                >
-                  <Phone className="w-5 h-5 flex-shrink-0 text-[#f1c888]" />
-                  <span>+91 8879240162</span>
-                </a>
-              </li>
-
-              <li>
-                <a
-                  href="mailto:foundationx.abr@gmail.com"
-                  className="flex items-center gap-3 font-manrope font-light text-[#9ca3af] text-sm hover:text-white transition-colors"
-                >
-                  <Mail className="w-5 h-5 flex-shrink-0 text-[#f1c888]" />
-                  <span className="break-all">
-                    foundationx.abr@gmail.com
-                  </span>
-                </a>
-              </li>
+              <li> <a href="mailto:foundationx.abr@gmail.com" className="flex items-center gap-3 font-manrope font-light text-[#9ca3af] text-sm hover:text-white transition-colors" > <div className="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0"> <Mail className="w-4 h-4 text-[#f1c888]" /> </div> <span className="break-all"> foundationx.abr@gmail.com </span> </a> </li>
 
             </ul>
           </div>
